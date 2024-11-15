@@ -1,18 +1,27 @@
-
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var screen: Screen = .splash
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        switch screen {
+        case .splash:
+            Splash(screen: $screen, dataC: VMF.shared.dm)
+        case .profile:
+            ProfileView(screen: $screen)
+        case .main:
+            Tab()
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+}
+
+enum Screen {
+    case splash
+    case main
+    case profile
 }

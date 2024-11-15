@@ -11,6 +11,40 @@
 		996A37DA2CE5FAA00012550F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A37D92CE5FAA00012550F /* ContentView.swift */; };
 		996A37DC2CE5FAA10012550F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996A37DB2CE5FAA10012550F /* Assets.xcassets */; };
 		996A37DF2CE5FAA10012550F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996A37DE2CE5FAA10012550F /* Preview Assets.xcassets */; };
+		996A37E72CE5FAE20012550F /* Dmanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A37E62CE5FAE20012550F /* Dmanager.swift */; };
+		996A37E92CE5FB020012550F /* VMF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A37E82CE5FB020012550F /* VMF.swift */; };
+		996A37F02CE5FBBC0012550F /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A37EF2CE5FBBC0012550F /* Splash.swift */; };
+		996A37F32CE601740012550F /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A37F22CE601740012550F /* Achievement.swift */; };
+		996A37F52CE613E00012550F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A37F42CE613E00012550F /* ProfileView.swift */; };
+		996A37F82CE619190012550F /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A37F72CE619190012550F /* ProfileImageView.swift */; };
+		996A37FA2CE61A670012550F /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A37F92CE61A670012550F /* ProfileTextField.swift */; };
+		996A37FC2CE61D3F0012550F /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A37FB2CE61D3F0012550F /* Tab.swift */; };
+		996A37FE2CE6204C0012550F /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A37FD2CE6204C0012550F /* LevelView.swift */; };
+		996A38002CE62D8F0012550F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A37FF2CE62D8F0012550F /* Profile.swift */; };
+		996A38022CE6EF1F0012550F /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38012CE6EF1F0012550F /* TrainingView.swift */; };
+		996A38042CE6FB150012550F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38032CE6FB150012550F /* SettingsView.swift */; };
+		996A38062CE704460012550F /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38052CE704460012550F /* EditProfileView.swift */; };
+		996A38082CE70AD30012550F /* AchievementsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38072CE70AD30012550F /* AchievementsViewModel.swift */; };
+		996A380A2CE70B9E0012550F /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38092CE70B9E0012550F /* AchievementsView.swift */; };
+		996A380C2CE71A5F0012550F /* ChallengesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A380B2CE71A5F0012550F /* ChallengesViewModel.swift */; };
+		996A380E2CE71A820012550F /* ChallengesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A380D2CE71A820012550F /* ChallengesView.swift */; };
+		996A38152CE732560012550F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38142CE732560012550F /* Stack.swift */; };
+		996A38182CE732770012550F /* Man.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38172CE732770012550F /* Man.swift */; };
+		996A381B2CE732940012550F /* Mode.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 996A38192CE732940012550F /* Mode.xcdatamodeld */; };
+		996A382A2CE735D30012550F /* ProfileCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A381C2CE735D30012550F /* ProfileCD+CoreDataClass.swift */; };
+		996A382B2CE735D30012550F /* ProfileCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A381D2CE735D30012550F /* ProfileCD+CoreDataProperties.swift */; };
+		996A382C2CE735D30012550F /* TaskIndex+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A381E2CE735D30012550F /* TaskIndex+CoreDataClass.swift */; };
+		996A382D2CE735D30012550F /* TaskIndex+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A381F2CE735D30012550F /* TaskIndex+CoreDataProperties.swift */; };
+		996A382E2CE735D30012550F /* TotalTime+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38202CE735D30012550F /* TotalTime+CoreDataClass.swift */; };
+		996A382F2CE735D30012550F /* TotalTime+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38212CE735D30012550F /* TotalTime+CoreDataProperties.swift */; };
+		996A38302CE735D30012550F /* Level+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38222CE735D30012550F /* Level+CoreDataClass.swift */; };
+		996A38312CE735D30012550F /* Level+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38232CE735D30012550F /* Level+CoreDataProperties.swift */; };
+		996A38322CE735D30012550F /* ChallengeCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38242CE735D30012550F /* ChallengeCD+CoreDataClass.swift */; };
+		996A38332CE735D30012550F /* ChallengeCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38252CE735D30012550F /* ChallengeCD+CoreDataProperties.swift */; };
+		996A38342CE735D30012550F /* AchievementCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38262CE735D30012550F /* AchievementCD+CoreDataClass.swift */; };
+		996A38352CE735D30012550F /* AchievementCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38272CE735D30012550F /* AchievementCD+CoreDataProperties.swift */; };
+		996A38362CE735D30012550F /* Exp+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38282CE735D30012550F /* Exp+CoreDataClass.swift */; };
+		996A38372CE735D30012550F /* Exp+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38292CE735D30012550F /* Exp+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +53,40 @@
 		996A37D92CE5FAA00012550F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		996A37DB2CE5FAA10012550F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		996A37DE2CE5FAA10012550F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		996A37E62CE5FAE20012550F /* Dmanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dmanager.swift; sourceTree = "<group>"; };
+		996A37E82CE5FB020012550F /* VMF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMF.swift; sourceTree = "<group>"; };
+		996A37EF2CE5FBBC0012550F /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		996A37F22CE601740012550F /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		996A37F42CE613E00012550F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		996A37F72CE619190012550F /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		996A37F92CE61A670012550F /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextField.swift; sourceTree = "<group>"; };
+		996A37FB2CE61D3F0012550F /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		996A37FD2CE6204C0012550F /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
+		996A37FF2CE62D8F0012550F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		996A38012CE6EF1F0012550F /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
+		996A38032CE6FB150012550F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		996A38052CE704460012550F /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		996A38072CE70AD30012550F /* AchievementsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewModel.swift; sourceTree = "<group>"; };
+		996A38092CE70B9E0012550F /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		996A380B2CE71A5F0012550F /* ChallengesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesViewModel.swift; sourceTree = "<group>"; };
+		996A380D2CE71A820012550F /* ChallengesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesView.swift; sourceTree = "<group>"; };
+		996A38142CE732560012550F /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		996A38172CE732770012550F /* Man.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Man.swift; sourceTree = "<group>"; };
+		996A381A2CE732940012550F /* Mode.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mode.xcdatamodel; sourceTree = "<group>"; };
+		996A381C2CE735D30012550F /* ProfileCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		996A381D2CE735D30012550F /* ProfileCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		996A381E2CE735D30012550F /* TaskIndex+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskIndex+CoreDataClass.swift"; sourceTree = "<group>"; };
+		996A381F2CE735D30012550F /* TaskIndex+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskIndex+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		996A38202CE735D30012550F /* TotalTime+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TotalTime+CoreDataClass.swift"; sourceTree = "<group>"; };
+		996A38212CE735D30012550F /* TotalTime+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TotalTime+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		996A38222CE735D30012550F /* Level+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Level+CoreDataClass.swift"; sourceTree = "<group>"; };
+		996A38232CE735D30012550F /* Level+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Level+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		996A38242CE735D30012550F /* ChallengeCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChallengeCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		996A38252CE735D30012550F /* ChallengeCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChallengeCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		996A38262CE735D30012550F /* AchievementCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AchievementCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		996A38272CE735D30012550F /* AchievementCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AchievementCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		996A38282CE735D30012550F /* Exp+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exp+CoreDataClass.swift"; sourceTree = "<group>"; };
+		996A38292CE735D30012550F /* Exp+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exp+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +119,16 @@
 		996A37D62CE5FAA00012550F /* App1074 */ = {
 			isa = PBXGroup;
 			children = (
+				996A38132CE7324A0012550F /* CD */,
+				996A37F12CE601650012550F /* Model */,
+				996A37E52CE5FAD30012550F /* Views */,
 				996A37D72CE5FAA00012550F /* App1074App.swift */,
 				996A37D92CE5FAA00012550F /* ContentView.swift */,
 				996A37DB2CE5FAA10012550F /* Assets.xcassets */,
 				996A37DD2CE5FAA10012550F /* Preview Content */,
+				996A37E62CE5FAE20012550F /* Dmanager.swift */,
+				996A37E82CE5FB020012550F /* VMF.swift */,
+				996A37EF2CE5FBBC0012550F /* Splash.swift */,
 			);
 			path = App1074;
 			sourceTree = "<group>";
@@ -65,6 +139,114 @@
 				996A37DE2CE5FAA10012550F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		996A37E52CE5FAD30012550F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				996A37F62CE618CA0012550F /* Components */,
+				996A37EE2CE5FBA60012550F /* Levels */,
+				996A37ED2CE5FBA00012550F /* Achievements */,
+				996A37EC2CE5FB9A0012550F /* Challenges */,
+				996A37EB2CE5FB8F0012550F /* Settings */,
+				996A37EA2CE5FB890012550F /* CreateProfile */,
+				996A37FB2CE61D3F0012550F /* Tab.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		996A37EA2CE5FB890012550F /* CreateProfile */ = {
+			isa = PBXGroup;
+			children = (
+				996A37F42CE613E00012550F /* ProfileView.swift */,
+			);
+			path = CreateProfile;
+			sourceTree = "<group>";
+		};
+		996A37EB2CE5FB8F0012550F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				996A38032CE6FB150012550F /* SettingsView.swift */,
+				996A38052CE704460012550F /* EditProfileView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		996A37EC2CE5FB9A0012550F /* Challenges */ = {
+			isa = PBXGroup;
+			children = (
+				996A380B2CE71A5F0012550F /* ChallengesViewModel.swift */,
+				996A380D2CE71A820012550F /* ChallengesView.swift */,
+			);
+			path = Challenges;
+			sourceTree = "<group>";
+		};
+		996A37ED2CE5FBA00012550F /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				996A38072CE70AD30012550F /* AchievementsViewModel.swift */,
+				996A38092CE70B9E0012550F /* AchievementsView.swift */,
+			);
+			path = Achievements;
+			sourceTree = "<group>";
+		};
+		996A37EE2CE5FBA60012550F /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				996A37FD2CE6204C0012550F /* LevelView.swift */,
+				996A38012CE6EF1F0012550F /* TrainingView.swift */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
+		996A37F12CE601650012550F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				996A37F22CE601740012550F /* Achievement.swift */,
+				996A37FF2CE62D8F0012550F /* Profile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		996A37F62CE618CA0012550F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				996A37F72CE619190012550F /* ProfileImageView.swift */,
+				996A37F92CE61A670012550F /* ProfileTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		996A38132CE7324A0012550F /* CD */ = {
+			isa = PBXGroup;
+			children = (
+				996A38162CE732660012550F /* Subs */,
+				996A38142CE732560012550F /* Stack.swift */,
+				996A38172CE732770012550F /* Man.swift */,
+				996A38192CE732940012550F /* Mode.xcdatamodeld */,
+			);
+			path = CD;
+			sourceTree = "<group>";
+		};
+		996A38162CE732660012550F /* Subs */ = {
+			isa = PBXGroup;
+			children = (
+				996A381C2CE735D30012550F /* ProfileCD+CoreDataClass.swift */,
+				996A381D2CE735D30012550F /* ProfileCD+CoreDataProperties.swift */,
+				996A381E2CE735D30012550F /* TaskIndex+CoreDataClass.swift */,
+				996A381F2CE735D30012550F /* TaskIndex+CoreDataProperties.swift */,
+				996A38202CE735D30012550F /* TotalTime+CoreDataClass.swift */,
+				996A38212CE735D30012550F /* TotalTime+CoreDataProperties.swift */,
+				996A38222CE735D30012550F /* Level+CoreDataClass.swift */,
+				996A38232CE735D30012550F /* Level+CoreDataProperties.swift */,
+				996A38242CE735D30012550F /* ChallengeCD+CoreDataClass.swift */,
+				996A38252CE735D30012550F /* ChallengeCD+CoreDataProperties.swift */,
+				996A38262CE735D30012550F /* AchievementCD+CoreDataClass.swift */,
+				996A38272CE735D30012550F /* AchievementCD+CoreDataProperties.swift */,
+				996A38282CE735D30012550F /* Exp+CoreDataClass.swift */,
+				996A38292CE735D30012550F /* Exp+CoreDataProperties.swift */,
+			);
+			path = Subs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +319,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				996A38062CE704460012550F /* EditProfileView.swift in Sources */,
+				996A37F82CE619190012550F /* ProfileImageView.swift in Sources */,
+				996A38002CE62D8F0012550F /* Profile.swift in Sources */,
 				996A37DA2CE5FAA00012550F /* ContentView.swift in Sources */,
+				996A380E2CE71A820012550F /* ChallengesView.swift in Sources */,
+				996A37E92CE5FB020012550F /* VMF.swift in Sources */,
+				996A37E72CE5FAE20012550F /* Dmanager.swift in Sources */,
+				996A38182CE732770012550F /* Man.swift in Sources */,
+				996A382A2CE735D30012550F /* ProfileCD+CoreDataClass.swift in Sources */,
+				996A382B2CE735D30012550F /* ProfileCD+CoreDataProperties.swift in Sources */,
+				996A382C2CE735D30012550F /* TaskIndex+CoreDataClass.swift in Sources */,
+				996A382D2CE735D30012550F /* TaskIndex+CoreDataProperties.swift in Sources */,
+				996A382E2CE735D30012550F /* TotalTime+CoreDataClass.swift in Sources */,
+				996A382F2CE735D30012550F /* TotalTime+CoreDataProperties.swift in Sources */,
+				996A38302CE735D30012550F /* Level+CoreDataClass.swift in Sources */,
+				996A38312CE735D30012550F /* Level+CoreDataProperties.swift in Sources */,
+				996A38322CE735D30012550F /* ChallengeCD+CoreDataClass.swift in Sources */,
+				996A38332CE735D30012550F /* ChallengeCD+CoreDataProperties.swift in Sources */,
+				996A38342CE735D30012550F /* AchievementCD+CoreDataClass.swift in Sources */,
+				996A38352CE735D30012550F /* AchievementCD+CoreDataProperties.swift in Sources */,
+				996A38362CE735D30012550F /* Exp+CoreDataClass.swift in Sources */,
+				996A38372CE735D30012550F /* Exp+CoreDataProperties.swift in Sources */,
+				996A381B2CE732940012550F /* Mode.xcdatamodeld in Sources */,
 				996A37D82CE5FAA00012550F /* App1074App.swift in Sources */,
+				996A37FE2CE6204C0012550F /* LevelView.swift in Sources */,
+				996A38082CE70AD30012550F /* AchievementsViewModel.swift in Sources */,
+				996A38042CE6FB150012550F /* SettingsView.swift in Sources */,
+				996A380A2CE70B9E0012550F /* AchievementsView.swift in Sources */,
+				996A37FA2CE61A670012550F /* ProfileTextField.swift in Sources */,
+				996A380C2CE71A5F0012550F /* ChallengesViewModel.swift in Sources */,
+				996A38022CE6EF1F0012550F /* TrainingView.swift in Sources */,
+				996A37F02CE5FBBC0012550F /* Splash.swift in Sources */,
+				996A38152CE732560012550F /* Stack.swift in Sources */,
+				996A37FC2CE61D3F0012550F /* Tab.swift in Sources */,
+				996A37F52CE613E00012550F /* ProfileView.swift in Sources */,
+				996A37F32CE601740012550F /* Achievement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +413,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -274,21 +490,27 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App1074/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "MelRewards: Unlock Fun";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nowww123.App1074;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mir.m3lr3wunlf8n;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,21 +524,27 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App1074/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "MelRewards: Unlock Fun";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nowww123.App1074;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mir.m3lr3wunlf8n;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -342,6 +570,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		996A38192CE732940012550F /* Mode.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				996A381A2CE732940012550F /* Mode.xcdatamodel */,
+			);
+			currentVersion = 996A381A2CE732940012550F /* Mode.xcdatamodel */;
+			path = Mode.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 996A37CC2CE5FAA00012550F /* Project object */;
 }

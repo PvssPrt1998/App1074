@@ -9,7 +9,7 @@ struct Profile {
 }
 
 struct Task {
-    let imageName: String
+    let description: String
     let name: String
     let time: Int
     let taskBreak: Int

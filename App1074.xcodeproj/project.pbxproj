@@ -46,6 +46,12 @@
 		996A38362CE735D30012550F /* Exp+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38282CE735D30012550F /* Exp+CoreDataClass.swift */; };
 		996A38372CE735D30012550F /* Exp+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38292CE735D30012550F /* Exp+CoreDataProperties.swift */; };
 		99F478492CEC582100EF3732 /* LevelTypeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F478482CEC582100EF3732 /* LevelTypeScreen.swift */; };
+		99F4784B2CEC63A200EF3732 /* SwimmingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F4784A2CEC63A200EF3732 /* SwimmingView.swift */; };
+		99F4784D2CEC63AB00EF3732 /* RunningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F4784C2CEC63AB00EF3732 /* RunningView.swift */; };
+		99F478522CEC656000EF3732 /* RunningTaskIndex+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F4784E2CEC656000EF3732 /* RunningTaskIndex+CoreDataClass.swift */; };
+		99F478532CEC656000EF3732 /* RunningTaskIndex+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F4784F2CEC656000EF3732 /* RunningTaskIndex+CoreDataProperties.swift */; };
+		99F478542CEC656000EF3732 /* SwimmingTaskIndex+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F478502CEC656000EF3732 /* SwimmingTaskIndex+CoreDataClass.swift */; };
+		99F478552CEC656000EF3732 /* SwimmingTaskIndex+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F478512CEC656000EF3732 /* SwimmingTaskIndex+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +95,12 @@
 		996A38282CE735D30012550F /* Exp+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exp+CoreDataClass.swift"; sourceTree = "<group>"; };
 		996A38292CE735D30012550F /* Exp+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exp+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		99F478482CEC582100EF3732 /* LevelTypeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTypeScreen.swift; sourceTree = "<group>"; };
+		99F4784A2CEC63A200EF3732 /* SwimmingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimmingView.swift; sourceTree = "<group>"; };
+		99F4784C2CEC63AB00EF3732 /* RunningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningView.swift; sourceTree = "<group>"; };
+		99F4784E2CEC656000EF3732 /* RunningTaskIndex+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RunningTaskIndex+CoreDataClass.swift"; sourceTree = "<group>"; };
+		99F4784F2CEC656000EF3732 /* RunningTaskIndex+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RunningTaskIndex+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		99F478502CEC656000EF3732 /* SwimmingTaskIndex+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwimmingTaskIndex+CoreDataClass.swift"; sourceTree = "<group>"; };
+		99F478512CEC656000EF3732 /* SwimmingTaskIndex+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwimmingTaskIndex+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +210,8 @@
 				996A37FD2CE6204C0012550F /* LevelView.swift */,
 				996A38012CE6EF1F0012550F /* TrainingView.swift */,
 				99F478482CEC582100EF3732 /* LevelTypeScreen.swift */,
+				99F4784A2CEC63A200EF3732 /* SwimmingView.swift */,
+				99F4784C2CEC63AB00EF3732 /* RunningView.swift */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -234,6 +248,10 @@
 		996A38162CE732660012550F /* Subs */ = {
 			isa = PBXGroup;
 			children = (
+				99F4784E2CEC656000EF3732 /* RunningTaskIndex+CoreDataClass.swift */,
+				99F4784F2CEC656000EF3732 /* RunningTaskIndex+CoreDataProperties.swift */,
+				99F478502CEC656000EF3732 /* SwimmingTaskIndex+CoreDataClass.swift */,
+				99F478512CEC656000EF3732 /* SwimmingTaskIndex+CoreDataProperties.swift */,
 				996A381C2CE735D30012550F /* ProfileCD+CoreDataClass.swift */,
 				996A381D2CE735D30012550F /* ProfileCD+CoreDataProperties.swift */,
 				996A381E2CE735D30012550F /* TaskIndex+CoreDataClass.swift */,
@@ -323,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				996A38062CE704460012550F /* EditProfileView.swift in Sources */,
+				99F4784B2CEC63A200EF3732 /* SwimmingView.swift in Sources */,
 				996A37F82CE619190012550F /* ProfileImageView.swift in Sources */,
 				996A38002CE62D8F0012550F /* Profile.swift in Sources */,
 				996A37DA2CE5FAA00012550F /* ContentView.swift in Sources */,
@@ -339,6 +358,10 @@
 				996A38302CE735D30012550F /* Level+CoreDataClass.swift in Sources */,
 				996A38312CE735D30012550F /* Level+CoreDataProperties.swift in Sources */,
 				996A38322CE735D30012550F /* ChallengeCD+CoreDataClass.swift in Sources */,
+				99F478522CEC656000EF3732 /* RunningTaskIndex+CoreDataClass.swift in Sources */,
+				99F478532CEC656000EF3732 /* RunningTaskIndex+CoreDataProperties.swift in Sources */,
+				99F478542CEC656000EF3732 /* SwimmingTaskIndex+CoreDataClass.swift in Sources */,
+				99F478552CEC656000EF3732 /* SwimmingTaskIndex+CoreDataProperties.swift in Sources */,
 				996A38332CE735D30012550F /* ChallengeCD+CoreDataProperties.swift in Sources */,
 				996A38342CE735D30012550F /* AchievementCD+CoreDataClass.swift in Sources */,
 				996A38352CE735D30012550F /* AchievementCD+CoreDataProperties.swift in Sources */,
@@ -349,6 +372,7 @@
 				996A37D82CE5FAA00012550F /* App1074App.swift in Sources */,
 				996A37FE2CE6204C0012550F /* LevelView.swift in Sources */,
 				996A38082CE70AD30012550F /* AchievementsViewModel.swift in Sources */,
+				99F4784D2CEC63AB00EF3732 /* RunningView.swift in Sources */,
 				996A38042CE6FB150012550F /* SettingsView.swift in Sources */,
 				996A380A2CE70B9E0012550F /* AchievementsView.swift in Sources */,
 				996A37FA2CE61A670012550F /* ProfileTextField.swift in Sources */,

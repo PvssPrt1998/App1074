@@ -10,25 +10,47 @@ final class DataManager: ObservableObject {
     @Published var exp = 0
     
     @Published var currentTaskIndex = 0
+    @Published var swimmingCurrentTaskIndex = 0
+    @Published var runningCurrentTaskIndex = 0
     
     var tasks: Array<Task> = [
-        Task(imageName: "PullUp", name: "Pull-up", time: 30, taskBreak: 10),
-        Task(imageName: "LegExtension", name: "Leg extensions", time: 40, taskBreak: 10),
-        Task(imageName: "RomanianRise", name: "Romanian rise", time: 30, taskBreak: 10),
-        Task(imageName: "Deadlift", name: "Deadlift", time: 10, taskBreak: 10),
-        Task(imageName: "DumpbellBenchPress", name: "Dumbbell Bench Press", time: 10, taskBreak: 10),
-        Task(imageName: "Burpbell", name: "Barbell row to the chin", time: 15, taskBreak: 5),
-        Task(imageName: "BenchCrunches", name: "Bench crunches", time: 15, taskBreak: 5),
-        Task(imageName: "ReverseCrunches", name: "Reverse crunches", time: 20, taskBreak: 5),
-        Task(imageName: "FrenchBenchPress", name: "French bench press", time: 20, taskBreak: 10),
-        Task(imageName: "ArmCurl", name: "Arm Curl", time: 20, taskBreak: 10)
+        Task(description: "A lower-body exercise where you bend your knees and hips to lower your body, then return to standing. Strengthens legs, glutes, and core.", name: "Pull-up", time: 30, taskBreak: 10),
+        Task(description: "Leg Extensions: A seated exercise where you straighten your knees against resistance to target the quadriceps.", name: "Leg extensions", time: 40, taskBreak: 10),
+        Task(description: "Romanian Deadlift: A hip-hinge exercise where you lower a weight while keeping your back straight, targeting hamstrings, glutes, and lower back.", name: "Romanian rise", time: 30, taskBreak: 10),
+        Task(description: "Deadlift: A full-body exercise where you lift a weight from the ground to standing, targeting back, legs, and core.", name: "Deadlift", time: 10, taskBreak: 10),
+        Task(description: "Dumbbell Bench Press: A chest exercise where you press dumbbells upward while lying on a bench, targeting chest, shoulders, and triceps.", name: "Dumbbell Bench Press", time: 10, taskBreak: 10),
+        Task(description: "Barbell Row to Chin: A pulling exercise where you row a barbell to your chin, targeting upper back, shoulders, and biceps.", name: "Barbell row to the chin", time: 15, taskBreak: 5),
+        Task(description: "Bench Crunches: An ab exercise where you curl your torso toward your knees while lying on a bench, targeting the core.", name: "Bench crunches", time: 15, taskBreak: 5),
+        Task(description: "Reverse Crunches: A core exercise where you lift your hips and legs toward your chest, targeting the lower abs.", name: "Reverse crunches", time: 20, taskBreak: 5),
+        Task(description: "French Bench Press: A tricep exercise where you lower a barbell or dumbbells behind your head while lying on a bench, then press back up.", name: "French bench press", time: 20, taskBreak: 10),
+        Task(description: "Arm Curl: A bicep exercise where you lift a weight by bending your elbow, targeting the upper arm muscles.", name: "Arm Curl", time: 20, taskBreak: 10)
     ]
+    
+    var swimmingTasks: Array<Task> = [
+        Task(description: "Butterfly (Dolphin): A swimming stroke where you move both arms simultaneously in a circular motion while kicking with both legs, resembling a dolphin's movement.", name: "Butterfly swimming", time: 40, taskBreak: 10),
+        Task(description: "Backstroke: A swimming stroke where you lie on your back and alternate arm movements while kicking to move forward.", name: "Backstroke", time: 10, taskBreak: 10),
+        Task(description: "Breaststroke: A swimming style where you move your arms in a half-circle while pulling your legs in a frog kick, focusing on rhythm and technique.", name: "Breaststroke", time: 30, taskBreak: 10),
+        Task(description: "Freestyle (Front Crawl): A swimming stroke where you alternate arm movements while kicking, focusing on speed and endurance.", name: "Freestyle", time: 50, taskBreak: 10),
+        Task(description: "Individual Medley (IM) Swimming: A swimming event that combines all four strokes—butterfly, backstroke, breaststroke, and freestyle—in a set order.", name: "Individual Medley", time: 40, taskBreak: 10)
+    ]
+    var runningTasks: Array<Task> = [
+        Task(description: "Long-Distance Running: Running over extended distances to build endurance and cardiovascular fitness.", name: "Long-Distance", time: 40, taskBreak: 10),
+        Task(description: "Relays: A team race where runners pass a baton to the next runner in a designated sequence.", name: "Relays", time: 10, taskBreak: 10),
+        Task(description: "Hurdle Race: Running while jumping over obstacles (hurdles), focusing on speed, agility, and coordination.", name: "Hurdle Race", time: 10, taskBreak: 10),
+        Task(description: "CrossFit: A high-intensity workout combining weightlifting, cardio, and bodyweight exercises for overall fitness.", name: "CrossFit", time: 10, taskBreak: 10),
+        Task(description: "Road Running: Running on paved surfaces like streets or highways, focusing on endurance and speed.", name: "Road Running", time: 40, taskBreak: 10)
+    ]
+    
     
     @Published var challenges: Array<Challenge> = [
         Challenge(title: "Log into the app", time: "2 days in a row", points: 200, levelForUnlock: 1, accepted: false, completed: false),
         Challenge(title: "Log into the app", time: "4 days in a row", points: 200, levelForUnlock: 1, accepted: false, completed: false),
         Challenge(title: "Log into the app", time: "6 days in a row", points: 300, levelForUnlock: 2, accepted: false, completed: false),
+        Challenge(title: "Run 2 marathons", time: "2 times a week", points: 300, levelForUnlock: 2, accepted: false, completed: false),//
+        Challenge(title: "swims 4 km", time: "2 times a week", points: 300, levelForUnlock: 2, accepted: false, completed: false),//
         Challenge(title: "Log into the app", time: "8 days in a row", points: 300, levelForUnlock: 2, accepted: false, completed: false),
+        Challenge(title: "Run 4 marathons", time: "4 times a week", points: 400, levelForUnlock: 3, accepted: false, completed: false),//
+        Challenge(title: "swims 8 km", time: "1 times a week", points: 400, levelForUnlock: 3, accepted: false, completed: false),//
         Challenge(title: "Log into the app", time: "10 days in a row", points: 400, levelForUnlock: 3, accepted: false, completed: false),
         Challenge(title: "Exercise", time: "10 minutes a day", points: 400, levelForUnlock: 3, accepted: false, completed: false),
         Challenge(title: "Exercise", time: "15 minutes a day", points: 500, levelForUnlock: 4, accepted: false, completed: false),
@@ -84,6 +106,13 @@ final class DataManager: ObservableObject {
             }
             if let taskIndexCD = try? loma.fetchTaskIndex() {
                 self.currentTaskIndex = taskIndexCD
+            }
+            if let taskIndexCD = try? loma.fetchSwimmingTaskIndex() {
+                self.swimmingCurrentTaskIndex = taskIndexCD
+            }
+            if let taskIndexCD = try? loma.fetchRunningTaskIndex() {
+                self.runningCurrentTaskIndex = taskIndexCD
+                print(runningCurrentTaskIndex)
             }
             
             DispatchQueue.main.async {
@@ -149,6 +178,43 @@ final class DataManager: ObservableObject {
             currentTaskIndex += 1
         }
         loma.saveTaskIndex(currentTaskIndex)
+    }
+    func swimmingDone(_ trainingTime: Int) {
+        totalTime += trainingTime
+        loma.saveTotalTime(totalTime)
+        exp += 100
+        if exp >= 6000 {
+            level += 1
+            let ost = exp - 6000
+            exp = ost
+        }
+        loma.saveExp(exp)
+        loma.saveLevel(level)
+        if swimmingCurrentTaskIndex == swimmingTasks.count - 1 {
+            swimmingCurrentTaskIndex = 0
+        } else {
+            swimmingCurrentTaskIndex += 1
+        }
+        loma.saveSwimmingTaskIndex(swimmingCurrentTaskIndex)
+    }
+    func runningDone(_ trainingTime: Int) {
+        totalTime += trainingTime
+        loma.saveTotalTime(totalTime)
+        exp += 100
+        if exp >= 6000 {
+            level += 1
+            let ost = exp - 6000
+            exp = ost
+        }
+        loma.saveExp(exp)
+        loma.saveLevel(level)
+        if runningCurrentTaskIndex == runningTasks.count - 1 {
+            runningCurrentTaskIndex = 0
+        } else {
+            runningCurrentTaskIndex += 1
+        }
+        loma.saveRunningTaskIndex(runningCurrentTaskIndex)
+        print(runningCurrentTaskIndex)
     }
     
     func increaseExp(_ value: Int) {

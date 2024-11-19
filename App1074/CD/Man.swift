@@ -85,6 +85,46 @@ final class LoMa {
         guard let expCD = try coreDataStack.managedContext.fetch(TaskIndex.fetchRequest()).first else { return nil }
         return Int(expCD.index)
     }
+    func saveSwimmingTaskIndex(_ exp: Int) {
+        do {
+            let expsCD = try coreDataStack.managedContext.fetch(SwimmingTaskIndex.fetchRequest())
+            if expsCD.count > 0 {
+                //exists
+                expsCD[0].index = Int32(exp)
+            } else {
+                let expCD = SwimmingTaskIndex(context: coreDataStack.managedContext)
+                expCD.index = Int32(exp)
+            }
+            coreDataStack.saveContext()
+        } catch let error as NSError {
+            print("Unresolved error \(error), \(error.userInfo)")
+        }
+    }
+    
+    func fetchSwimmingTaskIndex() throws -> Int? {
+        guard let expCD = try coreDataStack.managedContext.fetch(SwimmingTaskIndex.fetchRequest()).first else { return nil }
+        return Int(expCD.index)
+    }
+    func saveRunningTaskIndex(_ exp: Int) {
+        do {
+            let expsCD = try coreDataStack.managedContext.fetch(RunningTaskIndex.fetchRequest())
+            if expsCD.count > 0 {
+                //exists
+                expsCD[0].index = Int32(exp)
+            } else {
+                let expCD = RunningTaskIndex(context: coreDataStack.managedContext)
+                expCD.index = Int32(exp)
+            }
+            coreDataStack.saveContext()
+        } catch let error as NSError {
+            print("Unresolved error \(error), \(error.userInfo)")
+        }
+    }
+    
+    func fetchRunningTaskIndex() throws -> Int? {
+        guard let expCD = try coreDataStack.managedContext.fetch(RunningTaskIndex.fetchRequest()).first else { return nil }
+        return Int(expCD.index)
+    }
     
     func saveAchievement(_ achievement: Achievement) {
         do {

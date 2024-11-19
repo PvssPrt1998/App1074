@@ -1,8 +1,8 @@
 import SwiftUI
 
-struct TrainingView: View {
+struct RunningView: View {
     
-    @ObservedObject var viewModel: TrainingViewModel = VMF.shared.trainingViewModel()
+    @ObservedObject var viewModel: RunningViewModel = VMF.shared.runningViewModel()
     @Binding var show: Bool
     
     var body: some View {
@@ -141,16 +141,16 @@ struct TrainingView: View {
     
 }
 
-struct TrainingView_Preview: PreviewProvider {
+struct RunningView_Preview: PreviewProvider {
     
     @State static var show = true
     
     static var previews: some View {
-        TrainingView(show: $show)
+        RunningView(show: $show)
     }
 }
 
-final class TrainingViewModel: ObservableObject {
+final class RunningViewModel: ObservableObject {
     
     let dm: DataManager
     
@@ -160,7 +160,7 @@ final class TrainingViewModel: ObservableObject {
     @Published var currentTaskIndex: Int
     
     var currentTask: Task {
-        dm.tasks[currentTaskIndex]
+        dm.runningTasks[currentTaskIndex]
     }
     
     @Published var isBreak = false
@@ -209,13 +209,13 @@ final class TrainingViewModel: ObservableObject {
     
     init(dm: DataManager) {
         self.dm = dm
-        self.currentTaskIndex = dm.currentTaskIndex
+        self.currentTaskIndex = dm.runningCurrentTaskIndex
         timerValue = currentTask.time * 60
         breakValue = currentTask.taskBreak * 60
     }
     
     func end() {
-        dm.trainingDone(currentTask.time * 60 - timerValue)
+        dm.runningDone(currentTask.time * 60 - timerValue)
     }
     
     func strokeTimer() {

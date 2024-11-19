@@ -6,6 +6,8 @@ struct LevelView: View {
     @ObservedObject var viewModel = VMF.shared.levelViewModel()
     
     @State var showTraining = false
+    @State var showSwimming = false
+    @State var showRunning = false
     @State var showPicker = false
     @State var levelType: LevelType = .tripod
     
@@ -13,62 +15,47 @@ struct LevelView: View {
         ZStack {
             Color.bgMain.ignoresSafeArea()
             
-            VStack(spacing: 0) {
-                header
-                levelBar
-                Button {
-                    showPicker = true
-                } label: {
-                    HStack {
-                        Text(levelTypeText(levelType))
-                            .font(.system(size: 20, weight: .semibold))
-                            .foregroundColor(.white)
-                        Image(systemName: "arrowtriangle.down.fill")
-                            .font(.system(size: 12, weight: .regular))
-                            .foregroundColor(.white)
-                    }
-                }
-                .padding(.top, 20)
-                ZStack {
-                    exc
-                        .frame(maxHeight: .infinity, alignment: .top)
-                    VStack {
-                        HStack(spacing: 5) {
-                            Image("figureIndoor")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 24, height: 24)
-                            Text("Exercise: " + viewModel.currentTask.name)
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(spacing: 0) {
+                    header
+                    levelBar
+                    Button {
+                        showPicker = true
+                    } label: {
+                        HStack {
+                            Text(levelTypeText(levelType))
                                 .font(.system(size: 20, weight: .semibold))
                                 .foregroundColor(.white)
-                        }
-                        HStack(spacing: 5) {
-                            Image(systemName: "clock")
-                                .resizable()
-                                .scaledToFit()
-                                .foregroundColor(.cSecondary)
-                                .frame(width: 24, height: 24)
-                            Text("Time: \(viewModel.currentTask.time) minutes")
-                                .font(.system(size: 20, weight: .semibold))
-                                .foregroundColor(.white)
-                        }
-                        HStack(spacing: 5) {
-                            Image("cup")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 24, height: 24)
-                            Text("Break: \(viewModel.currentTask.taskBreak) minutes")
-                                .font(.system(size: 20, weight: .semibold))
+                            Image(systemName: "arrowtriangle.down.fill")
+                                .font(.system(size: 12, weight: .regular))
                                 .foregroundColor(.white)
                         }
                     }
-                    .padding(.top, 125)
+                    .padding(.top, 20)
+                    if levelType == .tripod {
+                        exc
+                    } else if levelType == .swimming {
+                        excS
+                    } else {
+                        excR
+                    }
+                    
+                    //.frame(maxHeight: .infinity, alignment: .top)
                 }
+                .padding(.bottom, 100)
+                //.frame(maxHeight: .infinity, alignment: .top)
             }
-            .frame(maxHeight: .infinity, alignment: .top)
             
             Button {
-                showTraining = true
+                switch levelType {
+                case .tripod:
+                    showTraining = true
+                case .swimming:
+                    showSwimming = true
+                case .running:
+                    showRunning = true
+                }
+                
             } label: {
                 Text("Start")
                     .font(.system(size: 15, weight: .regular))
@@ -83,6 +70,12 @@ struct LevelView: View {
         }
         .sheet(isPresented: $showTraining, content: {
             TrainingView(show: $showTraining)
+        })
+        .sheet(isPresented: $showSwimming, content: {
+            SwimmingView(show: $showSwimming)
+        })
+        .sheet(isPresented: $showRunning, content: {
+            RunningView(show: $showRunning)
         })
         .sheet(isPresented: $showPicker, content: {
             LevelTypeScreen(show: $showPicker, levelType: $levelType)
@@ -227,42 +220,226 @@ struct LevelView: View {
         .padding(EdgeInsets(top: 18, leading: 16, bottom: 0, trailing: 16))
     }
     private var exc: some View {
-        HStack(spacing: 50) {
-            Circle()
-                .fill(Color.c255253206)
-                .frame(width: 128, height: 128)
-                .overlay(
-                    Text("\(viewModel.leftMoon)")
-                        .font(.system(size: 72, weight: .bold))
-                        .foregroundColor(.c203201140)
-                )
-                .shadow(color: .c255252183,radius: 12)
-                .overlay(Color.black.opacity(0.5).clipShape(.circle))
-                .frame(maxHeight: .infinity, alignment: .bottom)
-            Circle()
-                .fill(Color.c255253206)
-                .frame(width: 180, height: 180)
-                .overlay(
-                    Text("\(viewModel.currentTaskIndex + 1)")
-                        .font(.system(size: 96, weight: .bold))
-                        .foregroundColor(.c203201140)
-                )
-                .shadow(color: .c255252183,radius: 12)
-                .frame(maxHeight: .infinity, alignment: .top)
-            Circle()
-                .fill(Color.c255253206)
-                .frame(width: 128)
-                .overlay(
-                    Text("\(viewModel.rightMoon)")
-                        .font(.system(size: 72, weight: .bold))
-                        .foregroundColor(.c203201140)
-                )
-                .shadow(color: .c255252183,radius: 12)
-                .overlay(Color.black.opacity(0.5).clipShape(.circle))
-                .frame(maxHeight: .infinity, alignment: .bottom)
+        ZStack {
+            HStack(spacing: 50) {
+                Circle()
+                    .fill(Color.c255253206)
+                    .frame(width: 128, height: 128)
+                    .overlay(
+                        Text("\(viewModel.leftMoon)")
+                            .font(.system(size: 72, weight: .bold))
+                            .foregroundColor(.c203201140)
+                    )
+                    .shadow(color: .c255252183,radius: 12)
+                    .overlay(Color.black.opacity(0.5).clipShape(.circle))
+                    .frame(maxHeight: .infinity, alignment: .bottom)
+                Circle()
+                    .fill(Color.c255253206)
+                    .frame(width: 180, height: 180)
+                    .overlay(
+                        Text("\(viewModel.currentTaskIndex + 1)")
+                            .font(.system(size: 96, weight: .bold))
+                            .foregroundColor(.c203201140)
+                    )
+                    .shadow(color: .c255252183,radius: 12)
+                    .frame(maxHeight: .infinity, alignment: .top)
+                    
+                Circle()
+                    .fill(Color.c255253206)
+                    .frame(width: 128)
+                    .overlay(
+                        Text("\(viewModel.rightMoon)")
+                            .font(.system(size: 72, weight: .bold))
+                            .foregroundColor(.c203201140)
+                    )
+                    .shadow(color: .c255252183,radius: 12)
+                    .overlay(Color.black.opacity(0.5).clipShape(.circle))
+                    .frame(maxHeight: .infinity, alignment: .bottom)
+            }
+            .frame(width: UIScreen.main.bounds.width, height: 260)
+            //.padding(.top, 20)
+            
+            VStack {
+                HStack(spacing: 5) {
+                    Image("figureIndoor")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24, height: 24)
+                    Text("Exercise: " + viewModel.currentTask.name)
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(.white)
+                }
+                
+                HStack(spacing: 5) {
+                    Image(systemName: "clock")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(.cSecondary)
+                        .frame(width: 24, height: 24)
+                    Text("Time: \(viewModel.currentTask.time) minutes")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(.white)
+                }
+                HStack(spacing: 5) {
+                    Image("cup")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24, height: 24)
+                    Text("Break: \(viewModel.currentTask.taskBreak) minutes")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(.white)
+                }
+            }
+            .padding(.top, 220)
         }
-        .frame(width: UIScreen.main.bounds.width, height: 260)
-        .padding(.top, 20)
+    }
+    private var excS: some View {
+        ZStack {
+            HStack(spacing: 50) {
+                Circle()
+                    .fill(Color.c255253206)
+                    .frame(width: 128, height: 128)
+                    .overlay(
+                        Text("\(viewModel.sLeftMoon)")
+                            .font(.system(size: 72, weight: .bold))
+                            .foregroundColor(.c203201140)
+                    )
+                    .shadow(color: .c255252183,radius: 12)
+                    .overlay(Color.black.opacity(0.5).clipShape(.circle))
+                    .frame(maxHeight: .infinity, alignment: .bottom)
+                Circle()
+                    .fill(Color.c255253206)
+                    .frame(width: 180, height: 180)
+                    .overlay(
+                        Text("\(viewModel.swimmingTaskIndex + 1)")
+                            .font(.system(size: 96, weight: .bold))
+                            .foregroundColor(.c203201140)
+                    )
+                    .shadow(color: .c255252183,radius: 12)
+                    .frame(maxHeight: .infinity, alignment: .top)
+                    
+                Circle()
+                    .fill(Color.c255253206)
+                    .frame(width: 128)
+                    .overlay(
+                        Text("\(viewModel.sRightMoon)")
+                            .font(.system(size: 72, weight: .bold))
+                            .foregroundColor(.c203201140)
+                    )
+                    .shadow(color: .c255252183,radius: 12)
+                    .overlay(Color.black.opacity(0.5).clipShape(.circle))
+                    .frame(maxHeight: .infinity, alignment: .bottom)
+            }
+            .frame(width: UIScreen.main.bounds.width, height: 260)
+            //.padding(.top, 20)
+            
+            VStack {
+                HStack(spacing: 5) {
+                    Image("figureIndoor")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24, height: 24)
+                    Text("Exercise: " + viewModel.swimmingTask.name)
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(.white)
+                }
+                
+                HStack(spacing: 5) {
+                    Image(systemName: "clock")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(.cSecondary)
+                        .frame(width: 24, height: 24)
+                    Text("Time: \(viewModel.swimmingTask.time) minutes")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(.white)
+                }
+                HStack(spacing: 5) {
+                    Image("cup")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24, height: 24)
+                    Text("Break: \(viewModel.swimmingTask.taskBreak) minutes")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(.white)
+                }
+            }
+            .padding(.top, 220)
+        }
+    }
+    private var excR: some View {
+        ZStack {
+            HStack(spacing: 50) {
+                Circle()
+                    .fill(Color.c255253206)
+                    .frame(width: 128, height: 128)
+                    .overlay(
+                        Text("\(viewModel.rLeftMoon)")
+                            .font(.system(size: 72, weight: .bold))
+                            .foregroundColor(.c203201140)
+                    )
+                    .shadow(color: .c255252183,radius: 12)
+                    .overlay(Color.black.opacity(0.5).clipShape(.circle))
+                    .frame(maxHeight: .infinity, alignment: .bottom)
+                Circle()
+                    .fill(Color.c255253206)
+                    .frame(width: 180, height: 180)
+                    .overlay(
+                        Text("\(viewModel.runningTaskIndex + 1)")
+                            .font(.system(size: 96, weight: .bold))
+                            .foregroundColor(.c203201140)
+                    )
+                    .shadow(color: .c255252183,radius: 12)
+                    .frame(maxHeight: .infinity, alignment: .top)
+                    
+                Circle()
+                    .fill(Color.c255253206)
+                    .frame(width: 128)
+                    .overlay(
+                        Text("\(viewModel.rRightMoon)")
+                            .font(.system(size: 72, weight: .bold))
+                            .foregroundColor(.c203201140)
+                    )
+                    .shadow(color: .c255252183,radius: 12)
+                    .overlay(Color.black.opacity(0.5).clipShape(.circle))
+                    .frame(maxHeight: .infinity, alignment: .bottom)
+            }
+            .frame(width: UIScreen.main.bounds.width, height: 260)
+            //.padding(.top, 20)
+            
+            VStack {
+                HStack(spacing: 5) {
+                    Image("figureIndoor")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24, height: 24)
+                    Text("Exercise: " + viewModel.runningTask.name)
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(.white)
+                }
+                
+                HStack(spacing: 5) {
+                    Image(systemName: "clock")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(.cSecondary)
+                        .frame(width: 24, height: 24)
+                    Text("Time: \(viewModel.runningTask.time) minutes")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(.white)
+                }
+                HStack(spacing: 5) {
+                    Image("cup")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24, height: 24)
+                    Text("Break: \(viewModel.runningTask.taskBreak) minutes")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundColor(.white)
+                }
+            }
+            .padding(.top, 220)
+        }
     }
     
     private func setImage(_ data: Data?) -> Image {
@@ -288,9 +465,17 @@ final class LevelViewModel: ObservableObject {
     @Published var exp: Int
     @Published var profile: Profile?
     @Published var currentTaskIndex: Int
+    @Published var swimmingTaskIndex: Int
+    @Published var runningTaskIndex: Int
     
     var currentTask: Task {
         dm.tasks[currentTaskIndex]
+    }
+    var swimmingTask: Task {
+        dm.swimmingTasks[swimmingTaskIndex]
+    }
+    var runningTask: Task {
+        dm.runningTasks[runningTaskIndex]
     }
     
     var leftMoon: Int {
@@ -309,7 +494,40 @@ final class LevelViewModel: ObservableObject {
         }
     }
     
+    var sLeftMoon: Int {
+        if swimmingTaskIndex == 0 {
+            return dm.swimmingTasks.count
+        } else {
+            return swimmingTaskIndex
+        }
+    }
+    
+    var sRightMoon: Int {
+        if swimmingTaskIndex == dm.swimmingTasks.count - 1 {
+            return 1
+        } else {
+            return swimmingTaskIndex + 2
+        }
+    }
+    var rLeftMoon: Int {
+        if runningTaskIndex == 0 {
+            return dm.runningTasks.count
+        } else {
+            return runningTaskIndex
+        }
+    }
+    
+    var rRightMoon: Int {
+        if runningTaskIndex == dm.runningTasks.count - 1 {
+            return 1
+        } else {
+            return runningTaskIndex + 2
+        }
+    }
+    
     private var currentTaskIndexCancellable: AnyCancellable?
+    private var swimmingTaskIndexCancellable: AnyCancellable?
+    private var runningTaskIndexCancellable: AnyCancellable?
     private var expCancellable: AnyCancellable?
     private var levelCancellable: AnyCancellable?
     private var profileCancellable: AnyCancellable?
@@ -320,9 +538,17 @@ final class LevelViewModel: ObservableObject {
         exp = dm.exp
         profile = dm.profile
         self.currentTaskIndex = dm.currentTaskIndex
+        self.swimmingTaskIndex = dm.swimmingCurrentTaskIndex
+        self.runningTaskIndex = dm.runningCurrentTaskIndex
         
         currentTaskIndexCancellable = dm.$currentTaskIndex.sink { [weak self] value in
             self?.currentTaskIndex = value
+        }
+        swimmingTaskIndexCancellable = dm.$swimmingCurrentTaskIndex.sink { [weak self] value in
+            self?.swimmingTaskIndex = value
+        }
+        runningTaskIndexCancellable = dm.$runningCurrentTaskIndex.sink { [weak self] value in
+            self?.runningTaskIndex = value
         }
         expCancellable = dm.$exp.sink { [weak self] value in
             self?.exp = value

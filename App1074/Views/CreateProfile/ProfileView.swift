@@ -3,6 +3,7 @@ import SwiftUI
 struct ProfileView: View {
     
     @ObservedObject var viewModel = VMF.shared.createProfileViewModel()
+    @Environment(\.safeAreaInsets) private var safeAreaInsets
     
     @State var selection = 0
     @Binding var screen: Screen
@@ -92,7 +93,7 @@ struct ProfileView: View {
             }
         }
         .padding(.horizontal, 16)
-        .padding(.top, 40)
+        .padding(.top, safeAreaInsets.top + 10)
         .frame(maxHeight: .infinity, alignment: .top)
     }
     private var endView: some View {
@@ -152,5 +153,38 @@ final class ProfileViewModel: ObservableObject {
     
     func saveProfile() {
         dm.saveProfile(Profile(image: image, name: name, surname: surname, target: target, birthday: birthday))
+    }
+}
+
+extension UIApplication {
+    var keyWindow: UIWindow? {
+        connectedScenes
+            .compactMap {
+                $0 as? UIWindowScene
+            }
+            .flatMap {
+                $0.windows
+            }
+            .first {
+                $0.isKeyWindow
+            }
+    }
+}
+
+private struct SafeAreaInsetsKey: EnvironmentKey {
+    static var defaultValue: EdgeInsets {
+        UIApplication.shared.keyWindow?.safeAreaInsets.swiftUiInsets ?? EdgeInsets()
+    }
+}
+
+extension EnvironmentValues {
+    var safeAreaInsets: EdgeInsets {
+        self[SafeAreaInsetsKey.self]
+    }
+}
+
+private extension UIEdgeInsets {
+    var swiftUiInsets: EdgeInsets {
+        EdgeInsets(top: top, leading: left, bottom: bottom, trailing: right)
     }
 }

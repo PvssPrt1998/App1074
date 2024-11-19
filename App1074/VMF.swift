@@ -19,6 +19,12 @@ final class VMF {
     func trainingViewModel() -> TrainingViewModel {
         TrainingViewModel(dm: dm)
     }
+    func swimmingViewModel() -> SwimmingViewModel {
+        SwimmingViewModel(dm: dm)
+    }
+    func runningViewModel() -> RunningViewModel {
+        RunningViewModel(dm: dm)
+    }
     
     func challengesViewModel() -> ChallengesViewModel {
         ChallengesViewModel(dm: dm)

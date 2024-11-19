@@ -45,6 +45,7 @@
 		996A38352CE735D30012550F /* AchievementCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38272CE735D30012550F /* AchievementCD+CoreDataProperties.swift */; };
 		996A38362CE735D30012550F /* Exp+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38282CE735D30012550F /* Exp+CoreDataClass.swift */; };
 		996A38372CE735D30012550F /* Exp+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A38292CE735D30012550F /* Exp+CoreDataProperties.swift */; };
+		99F478492CEC582100EF3732 /* LevelTypeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F478482CEC582100EF3732 /* LevelTypeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		996A38272CE735D30012550F /* AchievementCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AchievementCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		996A38282CE735D30012550F /* Exp+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exp+CoreDataClass.swift"; sourceTree = "<group>"; };
 		996A38292CE735D30012550F /* Exp+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exp+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		99F478482CEC582100EF3732 /* LevelTypeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTypeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			children = (
 				996A37FD2CE6204C0012550F /* LevelView.swift */,
 				996A38012CE6EF1F0012550F /* TrainingView.swift */,
+				99F478482CEC582100EF3732 /* LevelTypeScreen.swift */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				996A38342CE735D30012550F /* AchievementCD+CoreDataClass.swift in Sources */,
 				996A38352CE735D30012550F /* AchievementCD+CoreDataProperties.swift in Sources */,
 				996A38362CE735D30012550F /* Exp+CoreDataClass.swift in Sources */,
+				99F478492CEC582100EF3732 /* LevelTypeScreen.swift in Sources */,
 				996A38372CE735D30012550F /* Exp+CoreDataProperties.swift in Sources */,
 				996A381B2CE732940012550F /* Mode.xcdatamodeld in Sources */,
 				996A37D82CE5FAA00012550F /* App1074App.swift in Sources */,
@@ -490,7 +494,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App1074/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "MelRewards: Unlock Fun";
+				INFOPLIST_KEY_CFBundleDisplayName = "MelLevel: Unlock new bit sport";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -524,7 +528,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App1074/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "MelRewards: Unlock Fun";
+				INFOPLIST_KEY_CFBundleDisplayName = "MelLevel: Unlock new bit sport";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

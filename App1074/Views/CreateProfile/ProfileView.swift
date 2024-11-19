@@ -65,7 +65,7 @@ struct ProfileView: View {
     
     private var welcomeView: some View {
         VStack(spacing: 26) {
-            Text("Welcome to\nFitRewards")
+            Text("Welcome to\nMelLevel")
                 .font(.system(size: 36, weight: .semibold))
                 .foregroundColor(.cPrimary)
                 .multilineTextAlignment(.center)

@@ -6,6 +6,8 @@ struct LevelView: View {
     @ObservedObject var viewModel = VMF.shared.levelViewModel()
     
     @State var showTraining = false
+    @State var showPicker = false
+    @State var levelType: LevelType = .tripod
     
     var body: some View {
         ZStack {
@@ -14,6 +16,19 @@ struct LevelView: View {
             VStack(spacing: 0) {
                 header
                 levelBar
+                Button {
+                    showPicker = true
+                } label: {
+                    HStack {
+                        Text(levelTypeText(levelType))
+                            .font(.system(size: 20, weight: .semibold))
+                            .foregroundColor(.white)
+                        Image(systemName: "arrowtriangle.down.fill")
+                            .font(.system(size: 12, weight: .regular))
+                            .foregroundColor(.white)
+                    }
+                }
+                .padding(.top, 20)
                 ZStack {
                     exc
                         .frame(maxHeight: .infinity, alignment: .top)
@@ -69,6 +84,17 @@ struct LevelView: View {
         .sheet(isPresented: $showTraining, content: {
             TrainingView(show: $showTraining)
         })
+        .sheet(isPresented: $showPicker, content: {
+            LevelTypeScreen(show: $showPicker, levelType: $levelType)
+        })
+    }
+    
+    private func levelTypeText(_ levelType: LevelType) -> String {
+        switch levelType {
+        case .tripod: return "Tripod hall"
+        case .swimming: return "Swimming pool"
+        case .running: return "Running"
+        }
     }
     
     var lineWidth: CGFloat {
@@ -246,6 +272,8 @@ struct LevelView: View {
         }
         return Image(uiImage: image)
     }
+    
+    
 }
 
 #Preview {
@@ -306,4 +334,10 @@ final class LevelViewModel: ObservableObject {
             self?.profile = value
         }
     }
+}
+
+enum LevelType {
+    case tripod
+    case swimming
+    case running
 }

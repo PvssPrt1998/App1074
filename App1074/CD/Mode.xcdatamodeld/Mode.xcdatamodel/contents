@@ -9,6 +9,9 @@
         <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="time" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="ChallengeNumber" representedClassName=".ChallengeNumber" syncable="YES">
+        <attribute name="text" optional="YES" attributeType="String" defaultValueString="run0swim1lift2jump3gym4chal5"/>
+    </entity>
     <entity name="Exp" representedClassName=".Exp" syncable="YES">
         <attribute name="exp" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
@@ -24,6 +27,9 @@
     </entity>
     <entity name="RunningTaskIndex" representedClassName=".RunningTaskIndex" syncable="YES">
         <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="ShowTraining" representedClassName=".ShowTraining" syncable="YES">
+        <attribute name="show" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
     </entity>
     <entity name="SwimmingTaskIndex" representedClassName=".SwimmingTaskIndex" syncable="YES">
         <attribute name="index" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>

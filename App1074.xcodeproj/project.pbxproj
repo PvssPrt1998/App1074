@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9968974B2CF7481D002D5094 /* ChallengeNumber+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996897472CF7481C002D5094 /* ChallengeNumber+CoreDataClass.swift */; };
+		9968974C2CF7481D002D5094 /* ChallengeNumber+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996897482CF7481C002D5094 /* ChallengeNumber+CoreDataProperties.swift */; };
+		9968974D2CF7481D002D5094 /* ShowTraining+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996897492CF7481C002D5094 /* ShowTraining+CoreDataClass.swift */; };
+		9968974E2CF7481D002D5094 /* ShowTraining+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968974A2CF7481C002D5094 /* ShowTraining+CoreDataProperties.swift */; };
+		996897502CF74891002D5094 /* ComponentTraining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968974F2CF74891002D5094 /* ComponentTraining.swift */; };
 		996A37D82CE5FAA00012550F /* App1074App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A37D72CE5FAA00012550F /* App1074App.swift */; };
 		996A37DA2CE5FAA00012550F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A37D92CE5FAA00012550F /* ContentView.swift */; };
 		996A37DC2CE5FAA10012550F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996A37DB2CE5FAA10012550F /* Assets.xcassets */; };
@@ -55,6 +60,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		996897472CF7481C002D5094 /* ChallengeNumber+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChallengeNumber+CoreDataClass.swift"; sourceTree = "<group>"; };
+		996897482CF7481C002D5094 /* ChallengeNumber+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChallengeNumber+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		996897492CF7481C002D5094 /* ShowTraining+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShowTraining+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9968974A2CF7481C002D5094 /* ShowTraining+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShowTraining+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9968974F2CF74891002D5094 /* ComponentTraining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentTraining.swift; sourceTree = "<group>"; };
 		996A37D42CE5FAA00012550F /* App1074.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App1074.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		996A37D72CE5FAA00012550F /* App1074App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App1074App.swift; sourceTree = "<group>"; };
 		996A37D92CE5FAA00012550F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -230,6 +240,7 @@
 			children = (
 				996A37F72CE619190012550F /* ProfileImageView.swift */,
 				996A37F92CE61A670012550F /* ProfileTextField.swift */,
+				9968974F2CF74891002D5094 /* ComponentTraining.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -248,6 +259,10 @@
 		996A38162CE732660012550F /* Subs */ = {
 			isa = PBXGroup;
 			children = (
+				996897472CF7481C002D5094 /* ChallengeNumber+CoreDataClass.swift */,
+				996897482CF7481C002D5094 /* ChallengeNumber+CoreDataProperties.swift */,
+				996897492CF7481C002D5094 /* ShowTraining+CoreDataClass.swift */,
+				9968974A2CF7481C002D5094 /* ShowTraining+CoreDataProperties.swift */,
 				99F4784E2CEC656000EF3732 /* RunningTaskIndex+CoreDataClass.swift */,
 				99F4784F2CEC656000EF3732 /* RunningTaskIndex+CoreDataProperties.swift */,
 				99F478502CEC656000EF3732 /* SwimmingTaskIndex+CoreDataClass.swift */,
@@ -340,6 +355,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9968974B2CF7481D002D5094 /* ChallengeNumber+CoreDataClass.swift in Sources */,
+				9968974C2CF7481D002D5094 /* ChallengeNumber+CoreDataProperties.swift in Sources */,
+				9968974D2CF7481D002D5094 /* ShowTraining+CoreDataClass.swift in Sources */,
+				9968974E2CF7481D002D5094 /* ShowTraining+CoreDataProperties.swift in Sources */,
 				996A38062CE704460012550F /* EditProfileView.swift in Sources */,
 				99F4784B2CEC63A200EF3732 /* SwimmingView.swift in Sources */,
 				996A37F82CE619190012550F /* ProfileImageView.swift in Sources */,
@@ -369,6 +388,7 @@
 				99F478492CEC582100EF3732 /* LevelTypeScreen.swift in Sources */,
 				996A38372CE735D30012550F /* Exp+CoreDataProperties.swift in Sources */,
 				996A381B2CE732940012550F /* Mode.xcdatamodeld in Sources */,
+				996897502CF74891002D5094 /* ComponentTraining.swift in Sources */,
 				996A37D82CE5FAA00012550F /* App1074App.swift in Sources */,
 				996A37FE2CE6204C0012550F /* LevelView.swift in Sources */,
 				996A38082CE70AD30012550F /* AchievementsViewModel.swift in Sources */,
@@ -518,18 +538,18 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App1074/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "MelLevel: Unlock new bit sport";
+				INFOPLIST_KEY_CFBundleDisplayName = "1ώίn:Unlock new bit sport";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mir.m3lr3wunlf8n;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -552,18 +572,18 @@
 				DEVELOPMENT_ASSET_PATHS = "\"App1074/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "MelLevel: Unlock new bit sport";
+				INFOPLIST_KEY_CFBundleDisplayName = "1ώίn:Unlock new bit sport";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mir.m3lr3wunlf8n;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

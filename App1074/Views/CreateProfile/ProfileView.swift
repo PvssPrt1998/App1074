@@ -55,6 +55,7 @@ struct ProfileView: View {
             .ignoresSafeArea(.keyboard)
         }
         .onAppear {
+            AppDelegate.orientationLock = .portrait
             UIScrollView.appearance().bounces = false
             UIScrollView.appearance().isScrollEnabled = false
         }

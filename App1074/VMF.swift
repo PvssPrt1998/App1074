@@ -1,8 +1,11 @@
-import Foundation
+import SwiftUI
 
 final class VMF {
     
     let dm: DataManager = DataManager()
+    
+    var show = false
+    @AppStorage("powerliftingDescription") var powerliftingDescription = ""
     
     private init() {}
     

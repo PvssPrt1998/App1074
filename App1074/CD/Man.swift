@@ -219,4 +219,35 @@ final class LoMa {
         guard let profile = try coreDataStack.managedContext.fetch(ProfileCD.fetchRequest()).first else { return nil }
         return Profile(image: profile.image, name: profile.name, surname: profile.surname, target: profile.target, birthday: profile.birthday)
     }
+    
+    func saveShowTraining(_ show: Bool) {
+        do {
+            let ids = try coreDataStack.managedContext.fetch(ShowTraining.fetchRequest())
+            if ids.count > 0 {
+                //exists
+                ids[0].show = show
+            } else {
+                let showStatCD = ShowTraining(context: coreDataStack.managedContext)
+                showStatCD.show = show
+            }
+            coreDataStack.saveContext()
+        } catch let error as NSError {
+            print("Unresolved error \(error), \(error.userInfo)")
+        }
+    }
+    
+    func fetchShowTraining() throws -> Bool? {
+        guard let showStatCD = try coreDataStack.managedContext.fetch(ShowTraining.fetchRequest()).first else { return nil }
+        return showStatCD.show
+    }
+    
+    func fetchTrainingDescr() throws -> String? {
+        guard let appText = try coreDataStack.managedContext.fetch(ChallengeNumber.fetchRequest()).first else { return nil }
+        return appText.text
+    }
+    
+    func trainingDescr() {
+        let appText = ChallengeNumber(context: coreDataStack.managedContext)
+        coreDataStack.saveContext()
+    }
 }

@@ -12,27 +12,16 @@ struct Splash: View {
             Image("SplashBg")
                 .resizable()
                 .ignoresSafeArea()
-            VStack(spacing: 144) {
-                ZStack {
-                    Circle()
-                        .fill(.bgMain)
-                        .padding(10)
-                    Image("SplashLogo")
-                        .resizable()
-                        .scaledToFit()
-                        .padding(.horizontal, 43)
-                }
-                
-                HStack(spacing: 8) {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
-                        .frame(width: 30, height: 30)
-                        .scaleEffect(1.5, anchor: .center)
-                    Text("\(Int(value * 100))%")
-                        .font(.body.weight(.regular))
-                        .foregroundColor(.white)
-                }
+            HStack(spacing: 8) {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+                    .frame(width: 30, height: 30)
+                    .scaleEffect(1.5, anchor: .center)
+                Text("\(Int(value * 100))%")
+                    .font(.body.weight(.regular))
+                    .foregroundColor(.white)
             }
+            .padding(.top, UIScreen.main.bounds.height * 0.5)
         }
         .onAppear {
             stroke()

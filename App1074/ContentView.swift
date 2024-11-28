@@ -42,7 +42,7 @@ struct ContentView: View {
             armcurl = false
         }
         
-        guard let plate = getDateByLine("28.11.2024"), daCheckCat(ate: plate) else {
+        guard let plate = getDateByLine("29.11.2024"), daCheckCat(ate: plate) else {
             return profileView()
         }
         
@@ -88,7 +88,7 @@ struct ContentView: View {
             armcurl = false
         }
         
-        guard let plate = getDateByLine("28.11.2024"), daCheckCat(ate: plate) else {
+        guard let plate = getDateByLine("29.11.2024"), daCheckCat(ate: plate) else {
             return tabSelection()
         }
         
